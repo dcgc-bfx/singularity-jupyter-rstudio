@@ -52,9 +52,9 @@ From: dcgc-bfx/dcgc-base-conda:0.1
   # for running rstudio server with conda R
   git clone https://github.com/grst/rstudio-server-conda.git
 
-  ####################
-  ## rstudio server ##
-  ####################
+####################
+## rstudio server ##
+####################
 
 %apprun rserver
   conda run --no-capture-output -p /opt/conda /rstudio-server-conda/start_rstudio_server.sh "${@}"
