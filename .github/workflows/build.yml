@@ -25,4 +25,4 @@ jobs:
 
     - name: Build Container
       run: |
-        singularity build single_cell.sif Singularity
+        singularity build -F single_cell.sif Singularity
