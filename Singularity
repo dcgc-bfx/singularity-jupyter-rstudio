@@ -31,22 +31,22 @@ From: dcgc-bfx/dcgc-base-conda:0.1
     r-irkernel
 
   # clean conda cache
-  mamba clean -ai
+  mamba clean -ai --quiet --yes
 
   # jupyterlab extensions
   jupyter labextension install "@jupyterlab/toc"
 
   # rstudio server
-  apt-get update
-  apt-get install -y \
+  apt-get update --fix-missing -q
+  apt-get install -y -q \
     gdebi-core \
     uuid
 
-  wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.1093-amd64.deb
-  gdebi -n rstudio-server-1.3.1093-amd64.deb
+  wget --no-verbose https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.1093-amd64.deb
+  gdebi -q -n rstudio-server-1.3.1093-amd64.deb
   rm rstudio-server-1.3.1093-amd64.deb
 
-  apt-get clean
+  apt-get clean -q
   rm -rf /var/lib/apt/lists/*
 
   # for running rstudio server with conda R
