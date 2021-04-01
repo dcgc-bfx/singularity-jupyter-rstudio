@@ -59,11 +59,17 @@ From: dcgc-bfx/dcgc-base-conda:0.1
 ####################
 
 %apprun rserver
-  conda run --no-capture-output -p /opt/conda /rstudio-server-conda/start_rstudio_server.sh "${@}"
+  bash <<-EOF
+	source activate /opt/conda
+	/rstudio-server-conda/start_rstudio_server.sh "${@}"
+EOF
 
 #################
 ## jupyter lab ##
 #################
 
 %apprun jupyter
-  conda run --no-capture-output -p /opt/conda jupyter lab --no-browser "${@}"
+  bash <<-EOF
+	source activate /opt/conda
+	jupyter lab --no-browser "${@}"
+EOF
