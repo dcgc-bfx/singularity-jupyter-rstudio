@@ -52,6 +52,8 @@ From: dcgc-bfx/dcgc-base-conda:0.1
   # for running rstudio server with conda R
   git clone https://github.com/grst/rstudio-server-conda.git
 
+  chmod -R a+w /opt
+
 ####################
 ## rstudio server ##
 ####################
