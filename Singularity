@@ -1,5 +1,5 @@
 Bootstrap: shub
-From: dcgc-bfx/dcgc-base-conda:0.1
+From: dcgc-bfx/dcgc-base-conda:0.1.1
 
 %labels
   Author fabian.rost@tu-dresden.de
