@@ -14,7 +14,8 @@ From: dcgc-bfx/dcgc-base-conda:0.1
     singularity run --writable-tmpfs --app rserver library://fabianrost84/dcgc/single-cell.sif 8787
 
 %files
-  jupyter_notebook_config.json /opt/conda/etc/jupyter/
+  files/jupyter_notebook_config.json /opt/conda/etc/jupyter/
+  files/rserver.conf /etc/rstudio/rserver.conf
 
 %environment
   DEBIAN_FRONTEND=noninteractive
