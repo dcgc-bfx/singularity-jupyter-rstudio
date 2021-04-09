@@ -46,6 +46,7 @@ From: dcgc-bfx/dcgc-base-conda:0.1.1
   wget --no-verbose https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1106-amd64.deb
   gdebi -q -n rstudio-server-1.4.1106-amd64.deb
   rm rstudio-server-1.4.1106-amd64.deb
+  chmod -R a+rw /var/lib/rstudio-server
 
   apt-get clean -q
   rm -rf /var/lib/apt/lists/*
