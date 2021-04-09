@@ -42,9 +42,9 @@ From: dcgc-bfx/dcgc-base-conda:0.1
     gdebi-core \
     uuid
 
-  wget --no-verbose https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.1093-amd64.deb
-  gdebi -q -n rstudio-server-1.3.1093-amd64.deb
-  rm rstudio-server-1.3.1093-amd64.deb
+  wget --no-verbose https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1106-amd64.deb
+  gdebi -q -n rstudio-server-1.4.1106-amd64.deb
+  rm rstudio-server-1.4.1106-amd64.deb
 
   apt-get clean -q
   rm -rf /var/lib/apt/lists/*
